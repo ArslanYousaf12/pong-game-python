@@ -25,9 +25,12 @@ screen.onkey(l_paddle.down, "s")
 is_game_on = True
 while is_game_on:
     time.sleep(0.1)
-   
     screen.update()
-    ball.move_right_up()
+    ball.move()
+    # Detect collision with the wall
+    if ball.ycor() > 300 or ball.ycor() < -300:
+        ball.bounce()
+      
 
 
 screen.exitonclick()
