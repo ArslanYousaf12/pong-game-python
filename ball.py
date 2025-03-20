@@ -15,8 +15,11 @@ class Ball(Turtle):
        y_cor = self.ycor()
        self.goto(x_cor + self.x_move, y_cor + self.y_move)
        
-    def bounce(self):
+    def bounce_y(self):
         self.y_move *= -1
+    
+    def bounce_x(self):
+        self.x_move *= -1
              
        
     #    if(x_cor >= 350 or y_cor >= 300):
