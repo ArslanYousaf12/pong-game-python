@@ -8,6 +8,8 @@ class Ball(Turtle):
         self.penup()
         self.x_move = 10
         self.y_move = 10
+        self.ball_speed = 0.1
+        
         # self.shapesize()
         
     def move(self):
@@ -20,11 +22,14 @@ class Ball(Turtle):
     
     def bounce_x(self):
         self.x_move *= -1
+        self.ball_speed *= 0.9
         
     def restart(self):
-        self.home()
-        self.x_move *= -1
-        self.move()
+        self.goto(0,0)
+        self.ball_speed = 0.1
+        self.bounce_x()
+
+        
              
        
     #    if(x_cor >= 350 or y_cor >= 300):
