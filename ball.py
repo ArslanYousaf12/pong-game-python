@@ -20,6 +20,11 @@ class Ball(Turtle):
     
     def bounce_x(self):
         self.x_move *= -1
+        
+    def restart(self):
+        self.home()
+        self.x_move *= -1
+        self.move()
              
        
     #    if(x_cor >= 350 or y_cor >= 300):
